@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Screen2Controller">
+    <children>
+        <Label fx:id="serviceOptionLabel" alignment="CENTER" layoutX="2.0" layoutY="33.0" prefHeight="25.0" prefWidth="525.0" text="Recommended [SEGMENT] Clients for [OPTION]">
+            <font>
+                <Font name="Roboto Condensed" size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="companiesTable" layoutX="15.0" layoutY="74.0" prefHeight="334.0" prefWidth="498.0">
+            <columns>
+                <TableColumn fx:id="nameCol" editable="false" prefWidth="241.0" resizable="false" text="Company name" />
+                <TableColumn fx:id="finDataCol" editable="false" prefWidth="152.5" resizable="false" style="-fx-alignment: center;" text="FinData Column" />
+                <TableColumn fx:id="buttonCol" prefWidth="104.0" resizable="false" style="-fx-alignment: center;" text="Details" />
+            </columns>
+        </TableView>
+        <ButtonBar layoutY="414.0" prefHeight="40.0" prefWidth="511.0">
+            <buttons>
+                <Button fx:id="menuButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goToMenu" text="New Query" textAlignment="CENTER" />
+                <Button fx:id="exportButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exportToExcel" prefHeight="27.0" prefWidth="267.0" text="Export as .XLSX" textAlignment="CENTER" />
+                <Button fx:id="view_Potential_Button" contentDisplay="CENTER" mnemonicParsing="false" onAction="#viewPotentialButtonClicked" prefHeight="27.0" prefWidth="175.0" text="View Potential Clients" textAlignment="CENTER" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
